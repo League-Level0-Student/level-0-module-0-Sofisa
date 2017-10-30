@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 public class Crazy_Cat_Lady {
 	public static void main(String[] args) {
 		// 1. Ask the user how many cats they have
-string question = JOptionPane.showInputDialog("how many cats do you have?");
+		String question = JOptionPane.showInputDialog("how many cats do you have?");
 		// 2. Convert their answer into an int
 int num = Integer.parseInt(question);
 		// 3. If they have more than 3 cats, tell them they're a crazy cat lady

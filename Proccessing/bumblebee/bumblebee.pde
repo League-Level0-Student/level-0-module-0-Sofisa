@@ -1,20 +1,23 @@
 
-int y;
-int x;
+int y = 450;
+int x = 450;
+
 void setup() {  
   ellipseMode(CENTER);
   size(500, 500);
   background(160, 160, 160); 
   drawFlower(350, 100);
-
-  
 }
 void draw() {
-for(int i = 0; i<50; i++){
-  ellipse(x,y,25,25);
-}
-drawBeeFace(x,y);
-
+  for (int i = 0; i<=450; i+=15) {
+    ellipse(i, i, 50, 50);
+  if (i% 10 == 0 ){
+      fill (0, 0, 0);
+  }else{
+    fill (255,226,0);
+  }
+  }
+  drawBeeFace(x, y);
 }
 
 void drawFlower(int x, int y) {
@@ -39,7 +42,7 @@ void drawBeeFace(int BeeFaceX, int BeeFaceY) {
   ellipse(BeeFaceX-17, BeeFaceY-50, 10, 10);
   ellipse(BeeFaceX+17, BeeFaceY-50, 10, 10);
   noStroke();
-  fill(255, 251, 28);
+  fill(255, 226, 0);
   ellipse(BeeFaceX, BeeFaceY, 60, 60); // face
   fill(255, 237, 209);
   fill(0, 0, 0);
@@ -47,6 +50,6 @@ void drawBeeFace(int BeeFaceX, int BeeFaceY) {
   ellipse(BeeFaceX+10, BeeFaceY-15, 10, 10);
   ellipse(BeeFaceX, BeeFaceY-5, 10, 10); // nose
   ellipse(BeeFaceX, BeeFaceY+10, 20, 10);// mouth
-  fill(255, 251, 28);
+  fill(255, 226, 0);
   ellipse(BeeFaceX, BeeFaceY+5, 20, 6);
 }
